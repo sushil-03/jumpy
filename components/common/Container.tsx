@@ -15,15 +15,13 @@ const Container: FC<ContainerProps> = ({ children }) => {
         <div className="relative flex flex-col items-center w-screen h-screen font-poppins bg-gradient-to-r from-cyan-400 to-[#F7F7F7]">
             <div className="fixed w-screen h-screen bg-gradient-to-br from-[#43bee3] to-[#F7F7F7] " />
             <div className="fixed cursor-pointer right-10">
-                <Link href={"/"}>
-                    <Image
-                        src={"/images/twitter.png"}
-                        alt="Sphere"
-                        width="80"
-                        height="80"
-                        className="opacity-50"
-                    />
-                </Link>
+                <Image
+                    src={"/images/twitter.png"}
+                    alt="Sphere"
+                    width="80"
+                    height="80"
+                    className="opacity-50"
+                />
             </div>
             <div className="fixed -top-5 -right-5">
                 <Image
@@ -34,13 +32,18 @@ const Container: FC<ContainerProps> = ({ children }) => {
                     className="opacity-50"
                 />
             </div>
-            <div className="fixed left-10 top-2">
-                <Image
-                    src={"/images/twitter.png"}
-                    alt="Sphere"
-                    width="60"
-                    height="60"
-                />
+            <div className="fixed cursor-pointer left-10 top-2">
+                <div>
+                    <Link href="/" className="cursor-poin">
+                        <Image
+                            src={"/images/twitter.png"}
+                            alt="Sphere"
+                            width="60"
+                            height="60"
+                            className="cursor-pointer"
+                        />
+                    </Link>
+                </div>
             </div>
             <div className="fixed -bottom-5 right-10">
                 <Image

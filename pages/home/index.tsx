@@ -17,7 +17,7 @@ function Index() {
                 <title>Jumpy Elon</title>
             </Head>
             <div className="flex flex-col w-1/4 gap-4 m-auto h-3/4 mt-14">
-                <Text text="JUMPY ELON" />
+                <Text text="JUMPY ELON" isElon={true} />
                 <GameCard className=" bg-[#7CE0FF]">
                     <div className="relative flex flex-col items-center h-full ">
                         <div className="p-4 pt-8">
