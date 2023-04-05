@@ -31,7 +31,7 @@ function App() {
             <Head>
                 <title>Jumpy Elon</title>
             </Head>
-            <div className="flex flex-col w-1/4 gap-4 m-auto h-3/4 mt-14">
+            <div className="flex flex-col w-full gap-4 m-auto md:w-1/4 h-3/4 mt-14">
                 <GameCard className=" bg-[#7CE0FF]">
                     <div className="flex flex-col items-center m-auto mt-10 justify-evenly h-3/4 ">
                         <Text text="JUMPY ELON" />

@@ -8,19 +8,24 @@ import Image from "next/image";
 const Index = () => {
     const vidRef = React.useRef<HTMLVideoElement>(null);
     const [showresult, isResult] = useState<boolean>(false);
+    const [loading, isLoading] = useState<boolean>(false);
 
     const router = useRouter();
 
     const continuePlay = () => {
-        isResult(false);
-        vidRef.current?.play();
+        isLoading(true);
+        setTimeout(() => {
+            isLoading(false);
+            isResult(false);
+            vidRef.current?.play();
+        }, 4000);
     };
     useEffect(() => {
         vidRef.current?.play();
         setTimeout(() => {
             isResult(true);
             vidRef.current?.pause();
-        }, 12000);
+        }, 10000);
     }, []);
     return (
         <Container>
@@ -35,6 +40,7 @@ const Index = () => {
                     <video
                         ref={vidRef}
                         className="overflow-hidden rounded-md outline-none "
+                        muted
                     >
                         <source src="/videos/play2.mov" type="video/mp4" />
                     </video>
@@ -45,10 +51,12 @@ const Index = () => {
                                 <div className="flex flex-col items-center justify-center w-full h-full ">
                                     <Text text="GAME OVER" />
                                     <button
-                                        className="w-4/5 p-3 mx-10 mt-3 text-black bg-white rounded-md "
+                                        className="w-4/5 p-3 mx-10 mt-6 text-black bg-white rounded-md font-spacemono hover:bg-white/80"
                                         onClick={continuePlay}
                                     >
-                                        continue playing
+                                        {loading
+                                            ? "Loading ..."
+                                            : "continue by spending 50 ELON tokens"}
                                     </button>
                                 </div>
                                 <div className="absolute rotate-30 -bottom-10 -left-10">
