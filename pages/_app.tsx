@@ -6,13 +6,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { useRouter } from "next/router";
 
-import "@rainbow-me/rainbowkit/styles.css";
-
-import {
-    darkTheme,
-    getDefaultWallets,
-    RainbowKitProvider,
-} from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
@@ -68,27 +61,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         ]
     );
 
-    const { connectors } = getDefaultWallets({
-        appName: "Eclipse",
-        chains,
-    });
-
-    const wagmiClient = createClient({
-        autoConnect: true,
-        connectors,
-        provider,
-    });
-
     const router = useRouter();
     const path = router.pathname;
     return (
-        <WagmiConfig client={wagmiClient}>
-            <RainbowKitProvider theme={darkTheme()} chains={chains}>
-                <title>Jumpy</title>
-                <Component {...pageProps} />
-                <Toaster />
-            </RainbowKitProvider>{" "}
-        </WagmiConfig>
+        <div>
+            <title>Jumpy</title>
+            <Component {...pageProps} />
+            <Toaster />
+        </div>
     );
 }
 
