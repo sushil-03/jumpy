@@ -6,12 +6,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import GameCard from "../../components/GameCard";
 import Text from "../../components/common/Text";
-import { useConnect, useAccount } from "wagmi";
 import { useState } from "react";
 function Index() {
     const router = useRouter();
-    const { address } = useAccount();
-    const { connect, connectors } = useConnect();
     const [loading, setisLoading] = useState<Boolean>(false);
 
     return (

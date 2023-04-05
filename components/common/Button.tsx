@@ -22,10 +22,10 @@ const Button: FC<ButtonProps> = ({
     const getVariant = () => {
         switch (variant) {
             case "primary": {
-                return "bg-[#7CE0FF]  hover:bg-brand-300 active:bg-brand-200 border-brand-200 hover:border-brand-300 active:border-brand-200 text-black";
+                return "bg-[#7CE0FF]   active:border-brand-200 text-black";
             }
             case "secondary": {
-                return " bg-transparent text-black hover:bg-grey-100 active:bg-transparent border border-brand-200";
+                return " bg-white text-black hover:bg-grey-100 active:bg-transparent ";
             }
             case "tertiary": {
                 return "text-black bg-grey-300 hover:bg-grey-400 active:bg-grey-500";
@@ -37,14 +37,10 @@ const Button: FC<ButtonProps> = ({
     };
 
     return (
-        // <button
-        //     {...buttonProps}
-        //     className={`font-raleway font-bold py-2 md:py-4 px-10 select-none focus:outline-none text-sm  rounded-lg ${fullWidthStyle} border  disabled:bg-zinc-300 ${getVariant()} ${className}`}
-        // >
-        //     {children}
-        // </button>
         <div className="flex flex-row w-full">
-            <div className="flex items-center justify-center p-2 mx-1 text-xs text-gray-400 bg-[#7CE0FF]  rounded-l-sm md:text-md px-4">
+            <div
+                className={`flex items-center justify-center p-2 mx-1 text-xs text-gray-400   rounded-l-sm md:text-md px-4 ${getVariant()}`}
+            >
                 <Image
                     src={"/images/arrow.png"}
                     alt="Sphere"

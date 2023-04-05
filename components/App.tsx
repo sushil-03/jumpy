@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import GameCard from "./GameCard";
 import Text from "./common/Text";
-import { useConnect, useAccount } from "wagmi";
 import { useState } from "react";
 function App() {
     const router = useRouter();
@@ -48,7 +47,7 @@ function App() {
                 </GameCard>
                 <Button
                     fullWidth
-                    variant="primary"
+                    variant="secondary"
                     onClick={() => setIsWallet(true)}
                 >
                     Connect Solace Wallet

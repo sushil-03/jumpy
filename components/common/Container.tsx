@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { FC, ReactNode } from "react";
-// import { useAccount, useDisconnect } from "wagmi";
+import Link from "next/link";
 import Button from "./Button";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -14,14 +14,16 @@ const Container: FC<ContainerProps> = ({ children }) => {
     return (
         <div className="relative flex flex-col items-center w-screen h-screen font-poppins bg-gradient-to-r from-cyan-400 to-[#F7F7F7]">
             <div className="fixed w-screen h-screen bg-gradient-to-br from-[#43bee3] to-[#F7F7F7] " />
-            <div className="fixed right-10 ">
-                <Image
-                    src={"/images/twitter.png"}
-                    alt="Sphere"
-                    width="80"
-                    height="80"
-                    className="opacity-50"
-                />
+            <div className="fixed cursor-pointer right-10">
+                <Link href={"/"}>
+                    <Image
+                        src={"/images/twitter.png"}
+                        alt="Sphere"
+                        width="80"
+                        height="80"
+                        className="opacity-50"
+                    />
+                </Link>
             </div>
             <div className="fixed -top-5 -right-5">
                 <Image
