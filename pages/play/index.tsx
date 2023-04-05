@@ -39,7 +39,7 @@ const Index = () => {
                         <source src="/videos/play2.mov" type="video/mp4" />
                     </video>
 
-                    {!showresult && (
+                    {showresult && (
                         <div className="bg-[#FF7373] h-4/5 w-5/6 absolute top-10 right-10 rounded-md overflow-hidden backdrop-brightness-0">
                             <div className="h-full">
                                 <div className="flex flex-col items-center justify-center w-full h-full ">
