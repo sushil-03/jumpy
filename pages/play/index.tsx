@@ -63,9 +63,6 @@ const Index = () => {
                         </div>
                     )}
                 </GameCard>
-                {/* <Button variant="primary" fullWidth onClick={continuePlay}>
-                    Play Again
-                </Button> */}
             </div>
         </Container>
     );
