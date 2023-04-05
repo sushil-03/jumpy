@@ -32,6 +32,7 @@ module.exports = {
                 poppins: "Poppins, sans-serif",
                 raleway: "Raleway, sans-serif",
                 soulmate: "Soulmate, sans-serif",
+                spacemono: "Space Mono, sans-serif",
             },
             backgroundImage: {
                 card: "url('/assets/images/greenplicity.jpg')",
@@ -41,6 +42,9 @@ module.exports = {
             },
             animation: {
                 "spin-slow": "spin 60s linear infinite",
+            },
+            rotate: {
+                30: "30deg",
             },
         },
     },

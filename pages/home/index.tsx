@@ -90,7 +90,7 @@ function Index() {
                             </svg>
                         </div>
                     )}
-                    {loading ? "Loading ..." : "Start Playing"}
+                    {loading ? "Loading ..." : "Start Jumping"}
                 </Button>
             </div>
         </Container>

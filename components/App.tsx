@@ -70,28 +70,28 @@ function App() {
                                     solace protocol
                                 </span>
                             </div>
-                            <span className="text-gray-400">
+                            <span className="text-gray-400 font-spacemono">
                                 connect your solace account to jumpy elon
                             </span>
                         </div>
                         <div className="flex flex-col items-center w-1/2 h-full gap-3 pb-4 mx-auto ">
-                            <span className="text-xl font-medium font-poppins">
+                            <span className="text-xl font-medium ">
                                 enter your username
                             </span>
-                            <span className="mx-2 text-center text-gray-400">
+                            <span className="mx-2 font-normal text-center text-gray-400 font-spacemono">
                                 use your solace app in order to connect to jumpy
                                 elon
                             </span>
                             <input
                                 type="text"
-                                className="w-full px-2 py-3 mt-3 rounded-md bg-inherit"
+                                className="w-full px-2 py-3 mt-3 rounded-md bg-inherit font-spacemono placeholder:font-spacemono"
                                 placeholder="solace username"
                             />
                             {loading ? (
                                 <button
                                     type="button"
                                     disabled
-                                    className="inline-flex items-center justify-center w-full gap-2 p-3 mt-3 text-black bg-white rounded-md"
+                                    className="inline-flex items-center justify-center w-full gap-2 p-3 mt-3 text-black bg-white rounded-md font-spacemono"
                                 >
                                     <svg
                                         className="w-4 h-4 animate-spin"
@@ -106,11 +106,13 @@ function App() {
                                             d="M16.9497 7.05015C14.2161 4.31648 9.78392 4.31648 7.05025 7.05015C6.65973 7.44067 6.02656 7.44067 5.63604 7.05015C5.24551 6.65962 5.24551 6.02646 5.63604 5.63593C9.15076 2.12121 14.8492 2.12121 18.364 5.63593C18.7545 6.02646 18.7545 6.65962 18.364 7.05015C17.9734 7.44067 17.3403 7.44067 16.9497 7.05015Z"
                                         ></path>
                                     </svg>
-                                    <span>Loading...</span>
+                                    <span className="font-semibold tracking-wide font-spacemono">
+                                        Loading...
+                                    </span>
                                 </button>
                             ) : (
                                 <button
-                                    className="w-full p-3 mt-3 text-black bg-white rounded-md"
+                                    className="w-full p-3 mt-3 space-x-2 font-semibold tracking-wide text-black bg-white rounded-md font-spacemono "
                                     onClick={handleName}
                                 >
                                     confirm
@@ -136,37 +138,52 @@ function App() {
                                     solace protocol
                                 </span>
                             </div>
-                            <span className="text-[#00FFA3]">
-                                account created
+                            <span className="text-[#00FFA3] font-semibold tracking-wide font-spacemono">
+                                account connected
                             </span>
                         </div>
-                        <div className="flex flex-col items-center w-1/2 h-full gap-3 pb-4 mx-auto mt-">
-                            <p className="relative text-xl font-medium font-poppins">
-                                ankitrush{" "}
-                                <p className="w-2 h-2 bg-[#00FFA3] rounded-full absolute -right-2 -top-0"></p>
-                            </p>
-                            <span className="mx-2 text-center text-gray-400">
-                                jumpy elon needs these following permissions
-                            </span>
-                            <ul className="text-gray-400 list-disc">
-                                <li>
-                                    <span>
-                                        Spend NOT MORE than 100 ELON Tokens
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        Sign recordStat method for contract
-                                        AC34...zbXY
-                                    </span>
-                                </li>
-                            </ul>
+                        <div className="flex flex-col items-center w-full h-full gap-3 pb-4 mx-auto mt-">
+                            <div className="flex flex-col items-center w-1/2">
+                                <p className="relative text-xl font-medium font-poppins">
+                                    ankitrush{" "}
+                                    <p className="w-2 h-2 bg-[#00FFA3] rounded-full absolute -right-2 -top-0"></p>
+                                </p>
+                                <span className="mx-1 font-semibold tracking-wide text-center text-gray-400 font-spacemono">
+                                    jumpy elon needs these following permissions
+                                </span>
+                            </div>
+                            <div className="w-2/3 mx-auto text-center">
+                                <ul className="font-semibold tracking-wide text-gray-400 font-spacemono">
+                                    <li>
+                                        <p className="flex items-center justify-center gap-2 text-center ">
+                                            <p className="w-[6px] h-[6px] bg-gray-400 rounded-full "></p>{" "}
+                                            <p>
+                                                spend not more than 100 elon
+                                                tokens
+                                            </p>
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <p className="flex items-center justify-center gap-2 text-center">
+                                            <p className="w-[6px] h-[6px] bg-gray-400 rounded-full "></p>{" "}
+                                            <p className="">
+                                                sign recordStat method for
+                                                contract
+                                            </p>
+                                        </p>
+                                        <p className="relative text-left left-14">
+                                            ac34...zbxy
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
 
                             {loading ? (
                                 <button
                                     type="button"
                                     disabled
-                                    className="inline-flex items-center justify-center w-full gap-2 p-3 mt-3 text-black bg-white rounded-md"
+                                    className="inline-flex items-center justify-center w-3/5 gap-2 p-3 mt-3 font-semibold tracking-wide text-black bg-white rounded-md font-spacemono"
                                 >
                                     <svg
                                         className="w-4 h-4 animate-spin"
@@ -185,7 +202,7 @@ function App() {
                                 </button>
                             ) : (
                                 <button
-                                    className="w-full p-3 mt-3 text-black bg-white rounded-md"
+                                    className="w-3/5 p-3 mt-3 space-x-2 font-semibold tracking-wide text-black bg-white rounded-md font-spacemono "
                                     onClick={handleConfirm}
                                 >
                                     confirm
